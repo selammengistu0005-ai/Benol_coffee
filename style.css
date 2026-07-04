@@ -1,0 +1,510 @@
+/* ==========================================================================
+   Variables & Reset
+   ========================================================================== */
+:root {
+    --primary-blue: #1565C0;
+    --sky-blue: #E3F2FD;
+    --soft-gray: #F5F7FA;
+    --white: #FFFFFF;
+    --text-dark: #1a1a1a;
+    --text-light: #555555;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--soft-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   Typography & Reusable Utilities
+   ========================================================================== */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.soft-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.rounded-img {
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+section {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+}
+
+.btn-primary:hover {
+    background: #0D47A1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(21, 101, 192, 0.4);
+}
+
+.btn-secondary {
+    background: var(--sky-blue);
+    color: var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background: #BBDEFB;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Navigation (Glassmorphism)
+   ========================================================================== */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rem 5% 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   About Section
+   ========================================================================== */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    text-align: left;
+}
+
+.about img {
+    flex: 1;
+}
+
+/* ==========================================================================
+   Menu & Features (Grid Layouts)
+   ========================================================================== */
+.menu-grid, .feature-grid, .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.menu-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.price {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Features */
+.feature-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: var(--sky-blue);
+}
+
+.feature-card h4 {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Gallery Section
+   ========================================================================== */
+.gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.lightbox-trigger {
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.lightbox-trigger img {
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.lightbox-trigger:hover img {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.contact-container {
+    display: flex;
+    gap: 4rem;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.map-placeholder {
+    margin-top: 2rem;
+    height: 200px;
+    overflow: hidden;
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: #FAFAFA;
+    transition: var(--transition);
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background: var(--white);
+    box-shadow: 0 0 0 4px var(--sky-blue);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    background: var(--white);
+    padding: 5rem 5% 2rem;
+    border-top: 1px solid #E0E0E0;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.footer h3 {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-blue);
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: #0D47A1;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #E0E0E0;
+    color: #888;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* In a real scenario, implement a hamburger menu here */
+    }
+    
+    .hero, .about, .contact-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .hero {
+        padding-top: 8rem;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+    }
+    
+    .hero-content, .about-text {
+        max-width: 100%;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    section {
+        padding: 4rem 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-brand h2 {
+        text-align: center;
+    }
+}
