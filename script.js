@@ -1,66 +1,86 @@
-(() => {
-    'use strict';
+// ==========================================================================
+// 1. MOBILE NAVIGATION MENU
+// ==========================================================================
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+const navItems = document.querySelectorAll('.nav-item');
 
-    document.addEventListener('DOMContentLoaded', () => {
-        
-        // 1. Smooth Scrolling for Navigation Links
-        const navLinks = document.querySelectorAll('.nav-links a');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 80, // Accounts for the sticky glassmorphism nav
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+// Toggle menu open/close
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Switch between hamburger and close icon
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars-staggered');
+    icon.classList.toggle('fa-xmark');
+});
 
-        // 2. Intersection Observer for Smooth Fade-in Animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
-
-        const fadeObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Ensures the animation only runs once
-                }
-            });
-        }, observerOptions);
-
-        // Target all elements with the 'fade-in' class
-        const fadeElements = document.querySelectorAll('.fade-in');
-        fadeElements.forEach(el => fadeObserver.observe(el));
-
-        // 3. Prevent Default Jump on Gallery Lightbox Triggers
-        const galleryTriggers = document.querySelectorAll('.lightbox-trigger');
-        galleryTriggers.forEach(trigger => {
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Placeholder for future lightbox modal logic
-                console.log('Image clicked for lightbox view.');
-            });
-        });
-
-        // 4. Contact Form Submission Handler
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                // Simple alert to simulate form submission success
-                alert('Thank you for reaching out to Benol Coffee! We will review your message and get back to you shortly.');
-                contactForm.reset();
-            });
-        }
-        
+// Close menu when a link is clicked
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.querySelector('i').className = 'fa-solid fa-bars-staggered';
     });
-})();
+});
+
+
+// ==========================================================================
+// 2. MENU FILTRATION SYSTEM
+// ==========================================================================
+const filterBtns = document.querySelectorAll('.filter-btn');
+const menuCards = document.querySelectorAll('.menu-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons, add to the clicked one
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.dataset.filter;
+        
+        // Show/hide menu cards based on the selected category
+        menuCards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+
+// ==========================================================================
+// 3. GALLERY LIGHTBOX
+// ==========================================================================
+const galleryItems = document.querySelectorAll('.gal-item');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+
+// Open lightbox when a gallery item is clicked
+galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Get the image source from the clicked item
+        const imgSrc = item.querySelector('img').src;
+        lightboxImg.src = imgSrc;
+        
+        // Show lightbox and prevent background scrolling
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Close lightbox when the close button is clicked
+lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Restore scrolling
+});
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener('click', (e) => {
+    if(e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
