@@ -3,179 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benol Coffee | Premium Café</title>
+    <title>Benol Coffee | Premium Café Experience</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav id="navbar" class="glass-nav">
-        <div class="nav-container">
-            <a href="#" class="logo">Benol Coffee</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home" class="hero fade-in">
-        <div class="hero-content">
-            <h1>Welcome to Benol Coffee</h1>
-            <p>Crafted with passion, served with warmth. Enjoy exceptional coffee and delicious treats in a relaxing atmosphere.</p>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">View Menu</a>
-                <a href="#contact" class="btn btn-secondary">Visit Us</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="floating-coffee"></div>
-            <!-- Placeholder for high-quality coffee image -->
-            <img src="https://via.placeholder.com/600x600?text=Premium+Coffee" alt="Benol Signature Coffee">
-        </div>
+    <header id="header">
+        <a href="#home" class="logo">
+            <i class="fa-solid fa-mug-hot"></i><span>Benol Coffee</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-item active">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#features" class="nav-item">Why Us</a></li>
+            <li><a href="#menu" class="nav-item">Menu</a></li>
+            <li><a href="#gallery" class="nav-item">Gallery</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars-staggered"></i></div>
     </header>
 
-    <main>
-        <!-- About Section -->
-        <section id="about" class="about fade-in">
-            <div class="about-text">
-                <h2>Our Story</h2>
-                <p>Welcome to a cozy atmosphere where friendly service meets premium-quality ingredients. We proudly brew the finest Ethiopian coffee beans, ensuring every cup is a fresh and memorable experience.</p>
-            </div>
-            <img src="https://via.placeholder.com/500x400?text=Cozy+Interior" alt="Café Interior" class="rounded-img soft-shadow">
-        </section>
-
-        <!-- Menu Section -->
-        <section id="menu" class="menu fade-in">
-            <h2>Our Menu</h2>
-            <div class="menu-grid">
-                <!-- Menu Item Card -->
-                <div class="menu-card soft-shadow">
-                    <img src="https://via.placeholder.com/300x200?text=Espresso" alt="Espresso">
-                    <div class="card-content">
-                        <h3>Signature Espresso</h3>
-                        <p>Rich, bold, and perfectly extracted.</p>
-                        <span class="price">$3.50</span>
-                    </div>
-                </div>
-                <!-- Menu Item Card -->
-                <div class="menu-card soft-shadow">
-                    <img src="https://via.placeholder.com/300x200?text=Croissant" alt="Croissant">
-                    <div class="card-content">
-                        <h3>Butter Croissant</h3>
-                        <p>Flaky, warm, and freshly baked daily.</p>
-                        <span class="price">$4.00</span>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to<br>Benol Coffee</h1>
+            <p>Crafted with passion, served with warmth. Enjoy exceptional coffee and delicious treats in a relaxing, elegant atmosphere.</p>
+            <a href="#menu" class="btn btn-primary">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image-container">
+            <div class="hero-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000&auto=format&fit=crop" alt="Premium Barista Coffee">
+                
+                <div class="glass-card">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <h4>Premium Beans</h4>
+                        <p>100% Organic & Freshly Roasted</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Why Choose Us -->
-        <section id="features" class="features fade-in">
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=1000&auto=format&fit=crop" alt="Cozy Cafe Interior">
+        </div>
+        <div class="about-content">
+            <h2>Our Story & Passion</h2>
+            <p>At Benol Coffee, we believe that coffee is an art form. Located in a sophisticated, minimalist environment, we select only premium-quality ingredients to serve your daily brew.</p>
+            <p>Whether you're stopping by for a rapid morning espresso, settling in for a focused deep-work block, or meeting friends over fine desserts, our friendly service and cozy atmosphere provide the perfect retreat.</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="section-header">
             <h2>Why Choose Us</h2>
-            <div class="feature-grid">
-                <div class="feature-card soft-shadow">
-                    <h4>Premium Coffee Beans</h4>
-                    <p>Sourced locally for the perfect roast.</p>
-                </div>
-                <div class="feature-card soft-shadow">
-                    <h4>Free Wi-Fi</h4>
-                    <p>Stay connected in our cozy environment.</p>
-                </div>
-                <div class="feature-card soft-shadow">
-                    <h4>Fast Service</h4>
-                    <p>Friendly staff ready to serve you.</p>
+            <p>An unmatched standard of quality, environment, and taste.</p>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-item bento-large">
+                <i class="fa-solid fa-medal bento-icon"></i>
+                <h3>Premium Quality</h3>
+                <p>Sourced responsibly from exceptional world regions, roasted flawlessly to secure distinct dynamic notes.</p>
+            </div>
+            <div class="bento-item">
+                <i class="fa-solid fa-couch bento-icon"></i>
+                <h3>Cozy Space</h3>
+                <p>Modern layouts designed for comfort and focus.</p>
+            </div>
+            <div class="bento-item bento-tall">
+                <i class="fa-solid fa-apple-whole bento-icon"></i>
+                <h3>Fresh Daily</h3>
+                <p>From organic dairy to morning pastries baked fresh daily by master bakers.</p>
+            </div>
+            <div class="bento-item">
+                <i class="fa-solid fa-wifi bento-icon"></i>
+                <h3>Fast Wi-Fi</h3>
+                <p>Seamless connections for uninterrupted workflows.</p>
+            </div>
+            <div class="bento-item bento-wide">
+                <i class="fa-solid fa-face-smile bento-icon"></i>
+                <h3>Friendly Staff</h3>
+                <p>Talented baristas dedicated to cultivating unforgettable experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="section-header">
+            <h2>Crafted Menu</h2>
+            <p>Carefully balanced beverage extractions and sweet pairings.</p>
+        </div>
+        
+        <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">All Items</button>
+            <button class="filter-btn" data-filter="coffee">Coffee</button>
+            <button class="filter-btn" data-filter="drinks">Other Drinks</button>
+            <button class="filter-btn" data-filter="treats">Treats</button>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-card" data-category="coffee">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=500&auto=format&fit=crop" alt="Espresso"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Espresso</h3><span class="menu-price">180 ETB</span></div>
+                    <p>Bold, premium concentrated extraction with rich golden crema.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery" class="gallery fade-in">
-            <h2>Our Gallery</h2>
-            <div class="gallery-grid">
-                <a href="#" class="lightbox-trigger">
-                    <img src="https://via.placeholder.com/400x300?text=Signature+Drinks" alt="Signature Drinks" class="rounded-img soft-shadow">
-                </a>
-                <a href="#" class="lightbox-trigger">
-                    <img src="https://via.placeholder.com/400x300?text=Delicious+Desserts" alt="Desserts" class="rounded-img soft-shadow">
-                </a>
-                <a href="#" class="lightbox-trigger">
-                    <img src="https://via.placeholder.com/400x300?text=Café+Interior" alt="Café Interior" class="rounded-img soft-shadow">
-                </a>
-                <a href="#" class="lightbox-trigger">
-                    <img src="https://via.placeholder.com/400x300?text=Comfortable+Seating" alt="Comfortable Seating" class="rounded-img soft-shadow">
-                </a>
-                <a href="#" class="lightbox-trigger">
-                    <img src="https://via.placeholder.com/400x300?text=Food+Presentation" alt="Food Presentation" class="rounded-img soft-shadow">
-                </a>
-                <a href="#" class="lightbox-trigger">
-                    <img src="https://via.placeholder.com/400x300?text=Barista+At+Work" alt="Barista At Work" class="rounded-img soft-shadow">
-                </a>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact fade-in">
-            <h2>Contact Us</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><strong>Phone:</strong> +251 911 23 45 67</p>
-                    <p><strong>Email:</strong> hello@benolcoffee.com</p>
-                    <p><strong>Address:</strong> Bole Road, Addis Ababa, Ethiopia</p>
-                    <!-- Google Map Placeholder -->
-                    <div class="map-placeholder soft-shadow rounded-img">
-                        <img src="https://via.placeholder.com/500x250?text=Google+Map+Placeholder" alt="Location Map">
-                    </div>
+            <div class="menu-card" data-category="coffee">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=500&auto=format&fit=crop" alt="Cappuccino"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Cappuccino</h3><span class="menu-price">220 ETB</span></div>
+                    <p>Balanced espresso layer covered in deep texture steamed milk foam.</p>
                 </div>
-                <form class="contact-form soft-shadow">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
-        </section>
-    </main>
+            <div class="menu-card" data-category="coffee">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=500&auto=format&fit=crop" alt="Latte"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Caffè Latte</h3><span class="menu-price">240 ETB</span></div>
+                    <p>Silky steamed milk poured delicately over a rich signature double shot.</p>
+                </div>
+            </div>
+            <div class="menu-card" data-category="coffee">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1499961024600-ad094db305cc?q=80&w=500&auto=format&fit=crop" alt="Iced Coffee"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Iced Coffee</h3><span class="menu-price">260 ETB</span></div>
+                    <p>Chilled artisanal extraction served crisp over structural dense ice cubes.</p>
+                </div>
+            </div>
+            <div class="menu-card" data-category="drinks">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?q=80&w=500&auto=format&fit=crop" alt="Hot Chocolate"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Hot Chocolate</h3><span class="menu-price">200 ETB</span></div>
+                    <p>Decadent melted single-origin cacao infused into creamy microfoamed dairy.</p>
+                </div>
+            </div>
+            <div class="menu-card" data-category="treats">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=500&auto=format&fit=crop" alt="Croissant"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Flaky Croissant</h3><span class="menu-price">150 ETB</span></div>
+                    <p>Light, buttery puff layers baked to a perfect amber leaf shell.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
+    <section id="gallery" class="gallery">
+        <div class="section-header">
+            <h2>Glimpses of Benol</h2>
+            <p>Moments captured throughout our custom-tailored environment.</p>
+        </div>
+        <div class="gallery-bento">
+            <div class="gal-item gal-large">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Barista Pour">
+                <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=500&auto=format&fit=crop" alt="Coffee Cup">
+                <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=500&auto=format&fit=crop" alt="Iced Coffee">
+                <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gal-item gal-wide">
+                <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=800&auto=format&fit=crop" alt="Cafe Seating">
+                <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-glass">
+            <h2>Visit Our Space</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">We look forward to pouring your next premium cup. Stop by to take a break or secure a highly productive environment.</p>
+            <p><strong><i class="fa-solid fa-location-dot"></i> Address:</strong> Premium Business District, Addis Ababa</p>
+            <p style="margin-top: 1rem;"><strong><i class="fa-solid fa-phone"></i> Phone:</strong> +251 911 00 00 00</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
             <div class="footer-brand">
-                <h2>Benol Coffee</h2>
-                <p>A premium destination for coffee lovers. Fresh, sophisticated, and welcoming.</p>
+                <h3>Benol Coffee</h3>
+                <p>Sophisticated café experience offering premium extractions and spaces engineered for modern life.</p>
             </div>
             <div class="footer-links">
-                <h3>Quick Links</h3>
+                <h4>Navigation</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#menu">Menu</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-hours">
-                <h3>Business Hours</h3>
-                <p>Mon - Fri: 7:00 AM - 8:00 PM</p>
-                <p>Sat - Sun: 8:00 AM - 10:00 PM</p>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#">Instagram</a>
-                    <a href="#">TikTok</a>
-                    <a href="#">Telegram</a>
-                </div>
+            <div class="footer-links">
+                <h4>Business Hours</h4>
+                <ul>
+                    <li>Mon-Fri: 7AM - 9PM</li>
+                    <li>Sat-Sun: 8AM - 10PM</li>
+                </ul>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Benol Coffee. All rights reserved.</p>
-        </div>
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Benol Coffee. Crafted Elegantly.</p>
     </footer>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img src="" alt="Enlarged Image" class="lightbox-img" id="lightboxImg">
+    </div>
 
     <script src="script.js"></script>
 </body>
