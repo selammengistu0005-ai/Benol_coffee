@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benol Coffee | Premium Café Experience</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header">
+        <a href="#home" class="logo">
+            <i class="fa-solid fa-mug-hot"></i><span>Benol Coffee</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-item active">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#features" class="nav-item">Why Us</a></li>
+            <li><a href="#menu" class="nav-item">Menu</a></li>
+            <li><a href="#gallery" class="nav-item">Gallery</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars-staggered"></i></div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to<br>Benol Coffee</h1>
+            <p>Crafted with passion, served with warmth. Enjoy exceptional coffee and delicious treats in a relaxing, elegant atmosphere.</p>
+            <a href="#menu" class="btn btn-primary">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image-container">
+            <div class="hero-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000&auto=format&fit=crop" alt="Premium Barista Coffee">
+                
+                <div class="glass-card">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <h4>Premium Beans</h4>
+                        <p>100% Organic & Freshly Roasted</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=1000&auto=format&fit=crop" alt="Cozy Cafe Interior">
+        </div>
+        <div class="about-content">
+            <h2>Our Story & Passion</h2>
+            <p>At Benol Coffee, we believe that coffee is an art form. Located in a sophisticated, minimalist environment, we select only premium-quality ingredients to serve your daily brew.</p>
+            <p>Whether you're stopping by for a rapid morning espresso, settling in for a focused deep-work block, or meeting friends over fine desserts, our friendly service and cozy atmosphere provide the perfect retreat.</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+            <p>An unmatched standard of quality, environment, and taste.</p>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-item bento-large">
+                <i class="fa-solid fa-medal bento-icon"></i>
+                <h3>Premium Quality</h3>
+                <p>Sourced responsibly from exceptional world regions, roasted flawlessly to secure distinct dynamic notes.</p>
+            </div>
+            <div class="bento-item">
+                <i class="fa-solid fa-couch bento-icon"></i>
+                <h3>Cozy Space</h3>
+                <p>Modern layouts designed for comfort and focus.</p>
+            </div>
+            <div class="bento-item bento-tall">
+                <i class="fa-solid fa-apple-whole bento-icon"></i>
+                <h3>Fresh Daily</h3>
+                <p>From organic dairy to morning pastries baked fresh daily by master bakers.</p>
+            </div>
+            <div class="bento-item">
+                <i class="fa-solid fa-wifi bento-icon"></i>
+                <h3>Fast Wi-Fi</h3>
+                <p>Seamless connections for uninterrupted workflows.</p>
+            </div>
+            <div class="bento-item bento-wide">
+                <i class="fa-solid fa-face-smile bento-icon"></i>
+                <h3>Friendly Staff</h3>
+                <p>Talented baristas dedicated to cultivating unforgettable experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="section-header">
+            <h2>Crafted Menu</h2>
+            <p>Carefully balanced beverage extractions and sweet pairings.</p>
+        </div>
+        
+        <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">All Items</button>
+            <button class="filter-btn" data-filter="coffee">Coffee</button>
+            <button class="filter-btn" data-filter="drinks">Other Drinks</button>
+            <button class="filter-btn" data-filter="treats">Treats</button>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-card" data-category="coffee">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=500&auto=format&fit=crop" alt="Espresso"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Espresso</h3><span class="menu-price">180 ETB</span></div>
+                    <p>Bold, premium concentrated extraction with rich golden crema.</p>
+                </div>
+            </div>
+            <div class="menu-card" data-category="coffee">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=500&auto=format&fit=crop" alt="Cappuccino"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Cappuccino</h3><span class="menu-price">220 ETB</span></div>
+                    <p>Balanced espresso layer covered in deep texture steamed milk foam.</p>
+                </div>
+            </div>
+            <div class="menu-card" data-category="coffee">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=500&auto=format&fit=crop" alt="Latte"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Caffè Latte</h3><span class="menu-price">240 ETB</span></div>
+                    <p>Silky steamed milk poured delicately over a rich signature double shot.</p>
+                </div>
+            </div>
+            <div class="menu-card" data-category="coffee">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1499961024600-ad094db305cc?q=80&w=500&auto=format&fit=crop" alt="Iced Coffee"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Iced Coffee</h3><span class="menu-price">260 ETB</span></div>
+                    <p>Chilled artisanal extraction served crisp over structural dense ice cubes.</p>
+                </div>
+            </div>
+            <div class="menu-card" data-category="drinks">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?q=80&w=500&auto=format&fit=crop" alt="Hot Chocolate"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Hot Chocolate</h3><span class="menu-price">200 ETB</span></div>
+                    <p>Decadent melted single-origin cacao infused into creamy microfoamed dairy.</p>
+                </div>
+            </div>
+            <div class="menu-card" data-category="treats">
+                <div class="menu-img-wrapper"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=500&auto=format&fit=crop" alt="Croissant"></div>
+                <div class="menu-info">
+                    <div class="menu-detail"><h3>Flaky Croissant</h3><span class="menu-price">150 ETB</span></div>
+                    <p>Light, buttery puff layers baked to a perfect amber leaf shell.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="section-header">
+            <h2>Glimpses of Benol</h2>
+            <p>Moments captured throughout our custom-tailored environment.</p>
+        </div>
+        <div class="gallery-bento">
+            <div class="gal-item gal-large">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Barista Pour">
+                <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=500&auto=format&fit=crop" alt="Coffee Cup">
+                <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=500&auto=format&fit=crop" alt="Iced Coffee">
+                <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gal-item gal-wide">
+                <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=800&auto=format&fit=crop" alt="Cafe Seating">
+                <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-glass">
+            <h2>Visit Our Space</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">We look forward to pouring your next premium cup. Stop by to take a break or secure a highly productive environment.</p>
+            <p><strong><i class="fa-solid fa-location-dot"></i> Address:</strong> Premium Business District, Addis Ababa</p>
+            <p style="margin-top: 1rem;"><strong><i class="fa-solid fa-phone"></i> Phone:</strong> +251 911 00 00 00</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Benol Coffee</h3>
+                <p>Sophisticated café experience offering premium extractions and spaces engineered for modern life.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Business Hours</h4>
+                <ul>
+                    <li>Mon-Fri: 7AM - 9PM</li>
+                    <li>Sat-Sun: 8AM - 10PM</li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Benol Coffee. Crafted Elegantly.</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img src="" alt="Enlarged Image" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
